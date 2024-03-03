@@ -1,0 +1,31 @@
+{
+    "name": "weirdan/i10780",
+    "require": {
+        "yiisoft/yii2": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\models\\": "app/models/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Bruce Weirdan",
+            "email": "weirdan@gmail.com"
+        }
+    ],
+    "replace": {
+        "bower-asset/jquery": ">=1.11.0",
+        "bower-asset/inputmask": ">=3.2.0",
+        "bower-asset/punycode": ">=1.3.0",
+        "bower-asset/yii2-pjax": ">=2.0.0"
+    },
+    "require-dev": {
+        "vimeo/psalm": "^5.22"
+    },
+    "config": {
+        "allow-plugins": {
+            "yiisoft/yii2-composer": false
+        }
+    }
+}

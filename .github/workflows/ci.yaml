@@ -1,0 +1,20 @@
+name: Run Psalm
+on: [push, pull_request]
+permissions:
+  contents: read
+
+jobs:
+  psalm:
+    name: Run Psalm
+    runs-on: ubuntu-latest
+    steps:
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          tools: composer:v2
+          coverage: none
+        env:
+          fail-fast: true
+      - uses: actions/checkout@v4
+      - run: composer install
+      - run: vendor/bin/psalm --output-format=github
